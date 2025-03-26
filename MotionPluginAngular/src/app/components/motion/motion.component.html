@@ -1,0 +1,33 @@
+<div class="sensor-container">
+  <!-- Contador de Pasos -->
+  <div class="sensor-section">
+    <h2>Contador de Pasos</h2>
+    <div class="sensor-card">
+      <div class="icon">🚶‍♂️</div>
+      <p>Pasos: {{ pasos }}</p>
+      <p>Aceleración: {{ motionData.acceleration?.y?.toFixed(2) || 'No data' }} m/s²</p>
+    </div>
+  </div>
+
+  <!-- Rotador de Imágenes -->
+  <div class="sensor-section">
+    <h2>Rotador de Imágenes</h2>
+    <div class="sensor-card">
+      <div class="icon">🔄</div>
+      <p>Rotación: 
+        {{ motionData.rotation?.gamma?.toFixed(1) || 'No data' }}°
+      </p>
+    </div>
+  </div>
+
+  <!-- Medidor de Ángulos -->
+  <div class="sensor-section">
+    <h2>Medidor de Ángulos</h2>
+    <div class="sensor-card">
+      <div class="icon">↻</div>
+      <p>Ángulo: 
+        {{ motionData.rotation?.beta?.toFixed(1) ?? 'No data' }}°
+      </p>      
+    </div>
+  </div>
+</div>

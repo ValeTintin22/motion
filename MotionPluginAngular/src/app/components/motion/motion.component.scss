@@ -1,0 +1,95 @@
+// Paleta de colores vibrante
+$bg-color: #1e1e2e;
+$card-bg: #27293d;
+$primary: #ff4081;
+$secondary: #00e5ff;
+$accent: #ffd740;
+$text-color: #ffffff;
+
+// Estilos generales
+.sensor-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  background-color: $bg-color;
+  min-height: 100vh;
+  color: $text-color;
+}
+
+// Secciones de sensores
+.sensor-section {
+  width: 90%;
+  max-width: 400px;
+  background: $card-bg;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  transition: transform 0.2s ease-in-out, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  }
+
+  h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: $accent;
+    margin-bottom: 15px;
+  }
+}
+
+// Tarjetas de sensores
+.sensor-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: linear-gradient(135deg, $primary, $secondary);
+  border-radius: 12px;
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  
+  p {
+    font-size: 18px;
+    font-weight: 500;
+  }
+}
+
+// Iconos
+.icon {
+  font-size: 40px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+// Animación para valores numéricos
+@keyframes glow {
+  0% { text-shadow: 0 0 5px $accent; }
+  50% { text-shadow: 0 0 15px $accent; }
+  100% { text-shadow: 0 0 5px $accent; }
+}
+
+.sensor-card p {
+  animation: glow 1.5s infinite alternate;
+}
+
+// Responsive para celulares
+@media (max-width: 480px) {
+  .sensor-section {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .sensor-card p {
+    font-size: 16px;
+  }
+
+  .icon {
+    font-size: 36px;
+  }
+}

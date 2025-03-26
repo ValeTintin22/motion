@@ -22,6 +22,7 @@
     "@capacitor/core": "^7.1.0",
     "@capacitor/ios": "^7.1.0",
     "@capacitor/motion": "^7.0.0",
+    "android": "^0.0.8",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
